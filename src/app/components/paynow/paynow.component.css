@@ -1,0 +1,255 @@
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.app-container{
+  z-index: 2;
+  height: 540px;
+  width: 600px;
+  background-image: linear-gradient(#580e8f,#9200ff);
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.top-box{
+  height: 150px;
+  background-color: #28c2d6;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+.top-box{
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.left-icon{
+  float: left;
+  margin-left: 30px;
+}
+
+.right-icon{
+  float: right;
+  margin-right: 30px;
+}
+
+.middle-box{
+  height: 150px;
+  background-image: linear-gradient(#580e8f,#9200ff);
+  margin: -70px 30px 20px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 10px;
+  color: #fff;
+}
+.middle-box h1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  font-weight: normal;
+
+
+}
+
+.middle-box h1 span{
+  font-size: 20px;
+  margin-left: 5px;
+  bottom: 18px;
+  position : relative;
+}
+
+.payment-option-btn{
+  color: #fff;
+  margin: 5px 30px;
+  height: 30px;
+  width: 290px;
+  background-color: #8a44cc;
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  font-size:large;
+}
+
+.card-details{
+  background: rgb(255, 249, 249);
+  color: rgb(0, 0, 0);
+  margin: 10px 30px;
+  padding: 20px 40px;
+  border-radius:3px;
+}
+.card-details p{
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.card-details label{
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.card-num-field-group{
+  margin-top: 10px;
+}
+
+.date-field-group{
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.cvc-field-group{
+  margin-top: 10px;
+  display: inline-block;
+  float: right;
+}
+
+.name-field-group{
+  margin-top: 10px;
+}
+
+.card-num-field, .name-field{
+  width: 260px;
+
+}
+
+.date-field, .cvc-field{
+  width: 70px;
+}
+
+.card-details input{
+  border: 1px solid #ccc;
+  height: 22px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.card-details input::placeholder{
+  color: #ccc;
+}
+
+
+.pay-btn{
+  width: 270px;
+  color: #fff;
+  margin-top: 20px;
+  height: 30px;
+  background-color: #9100fd;
+  border: none;
+  cursor: pointer;
+}
+.pay-btn2{
+  width: 270px;
+  color: rgb(0, 0, 0);
+  margin-top: 8px;
+  margin-left: 40px;
+  height: 40px;
+  background-color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius:3px;
+}
+
+
+
+.body {
+  height:60vh;
+  width:50vh;
+  z-index: 2;
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+.models{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.sucess{
+  text-align: center;
+}
+.circle {
+  z-index: 2;
+  background-color: var(--circle-color);
+  width: var(--circle-width);
+  height: var(--circle-height);
+  left: calc(50% - var(--circle-width) / 2);
+  top: calc(50% - var(--circle-height) / 2);
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: var(--tick-thickness) solid var(--circle-border-color);
+}
+
+.tick {
+  display: inline-block;
+  width: 56%;
+  height: 24%;
+  border-left: var(--tick-thickness) solid var(--tick-final-color);
+  border-bottom: var(--tick-thickness) solid var(--tick-final-color);
+  position: absolute;
+  margin: 0 auto;
+  left: calc(var(--circle-width)*0.15);
+  top: calc(var(--circle-height)/2 - var(--tick-height));
+  transform: rotate(-40deg);
+  transform-origin: calc(var(--tick-width)*0.57) calc(var(--tick-height)/2);
+  animation: tick-animation 1s;
+}
+
+@keyframes tick-animation {
+  0% {
+    height: 0;
+    width: 0;
+    border-left-color: var(--tick-first-color);
+}
+50% {
+    width: 0;
+    height: var(--tick-height);
+    border-left-color: var(--tick-second-color);
+    border-bottom-color: var(--tick-first-color);
+}
+75% {
+    border-left-color: var(--tick-third-color);
+    border-bottom-color: var(--tick-second-color);
+}
+90% {
+    border-bottom-color: var(--tick-third-color);
+}
+100% {
+    width: var(--tick-width);
+    border-color: var(--tick-final-color);
+}
+}
+
+.bottom-box
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pnow{
+  align-items: center;
+  justify-content: center;
+}
+.pnow2
+{
+  margin-right: 27px;
+}
+

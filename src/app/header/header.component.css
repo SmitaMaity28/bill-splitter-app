@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css);
+@import url(https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css);
+@import url(https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css);
+
+
+
+ .nav {
+   font-family: 'Trirong';
+ }
+
+ .nav :hover {
+   font-weight: bolder;
+ }
+
+ .logo {
+   color: beige;
+   padding-top: 2px;
+   margin-top: 4px;
+   font-size: 51px;
+
+   text-decoration: none;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+ }
+
+ .hov :hover {
+   font-style: italic;
+   color: rgb(16, 102, 126);
+
+
+ }
+
+
+ .hov {
+   padding-right: 4%;
+   margin: 2px;
+
+ }
+ a{
+  text-decoration:none;
+
+ }
+
+button {
+  background-color: beige;
+}
+button:hover{
+  background-color: antiquewhite;
+  color:black ;
+}
+button:active{
+  background-color: antiquewhite;
+  color:rgb(0, 0, 0) ;
+  border-color: wheat;
+
+}
+
+
+ .navbar {
+   padding: 0;
+
+ }
+
+ .xyz {
+   background-color: #27b0d985;
+ }
+
+ .navbar ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   list-style: none;
+  padding-right: 5px;
+  margin-right: 10px;
+
+
+ }
+
+ .navbar a{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-family: "Poppins", sans-serif;
+   color: rgb(0, 0, 0);
+   font-size: 17px;
+   padding: 7px;
+   white-space: nowrap;
+   transition: 0.3s;
+   letter-spacing: 0.4px;
+   position: relative;
+
+ }
+
+ .icon {
+  color: #fff;
+  width: 3px;
+  margin-top: 7px;
+  height: 7px;
+  size: px;
+  padding-left: 2px;
+
+ }
+.btn{
+  height: 50px;
+  width: 80px;
+  font-weight: bold;
+}

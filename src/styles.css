@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+a{
+    text-decoration: none;
+}
+body
+{
+   background-color: hsl(58, 65%, 91%);
+
+}
+:root {
+  /* CSS variables to change the configuration of tick and circle */
+  --circle-width: 250px;
+  --circle-height: 250px;
+  --tick-width: calc(var(--circle-width)*0.56);
+  --tick-height: calc(var(--circle-height)*0.24);
+  --tick-thickness: calc(var(--tick-width)*0.1);
+  --background-color: #4285F4;    /* Royal Blue */
+  --circle-color: #fff;           /* White */
+  --tick-first-color: #0F9D58;    /* Shamrock Green */
+  --tick-second-color: #F4B400;   /* Selective Yellow */
+  --tick-third-color: #DB4437;    /* Cinnabar */
+  --tick-final-color: #4285F4;    /* Royal Blue */
+}
+
+/*------------------*/

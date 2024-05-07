@@ -1,0 +1,14 @@
+<div class='formConatiner'>
+  <div class='formWrapper'>
+      <span class='logo'>Splitdo</span>
+      <span class = 'title'>Register</span>
+      <form class='regis'>
+          <input  class='inpt'type='text' placeholder='Name' name='name' [(ngModel)]="name"/>
+          <input  class='inpt'type='email' placeholder='Email' name='email' [(ngModel)]="email"/>
+          <input  class='inpt'type='password' placeholder='password' name='password' [(ngModel)]="password"/>
+          <input  class='inpt'type='password' placeholder='confirm password'  name='confirmPassword' [(ngModel)]="confirmPassword"/>
+          <button class='sigbtn' (click)="submit()" [disabled]="(name.length>0 && email.length>0 && password.length>0 && confirmPassword.length>0)?false:true">SignUp</button>
+      </form>
+      <p id='dntacc'>You do have an account? Login</p>
+  </div>
+</div>

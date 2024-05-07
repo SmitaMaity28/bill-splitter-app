@@ -1,0 +1,52 @@
+<div class="overlay"></div>
+<div class="body container models"  *ngIf="!pay">
+
+  <div class="circle">
+    <div class="tick"></div>
+  </div>
+  <h1 class="sucess"> Sucess</h1>
+</div>
+
+<div class= "app-container" *ngIf="pay">
+
+  <div class="middle-box">
+      <h1>{{amount}}<span>₹</span></h1>
+      <p>Pay To Splitdo Company Ltd</p>
+  </div>
+  <div class="bottom-box">
+  <button type="button" class= "payment-option-btn" (click)="paid()">Pay with GooglePay</button>
+  <button type="button" class= "payment-option-btn" (click)="paid()">Pay with Netbanking</button>
+  </div>
+
+  <div class="card-details">
+  <p>Pay using credit or debit card</p>
+  <div class="card-num-field-group">
+  <label>Card Number</label><br>
+  <input type="number" class="card-num-field" placeholder="xxxx-xxxx-xxxx-xxxx">
+  </div>
+
+  <div class="date-field-group">
+  <label>Expiry Date</label><br>
+  <input type="number" class="date-field" placeholder="mm">
+  <input type="number" class="date-field" placeholder="yyyy">
+  </div>
+
+  <div class="cvc-field-group">
+  <label>CVV</label><br>
+  <input type="password" class="cvc-field" placeholder="xxx">
+  </div>
+
+  <div class="name-field-group">
+  <label>Card Holder Name</label><br>
+  <input type="text" class="name-field" placeholder="Full Name">
+  </div>
+<div class="d-flex pnow">
+  <button type="button" class="pay-btn" (click)="paid()">Pay Now</button>
+</div>
+
+  </div>
+  <div class="d-flex pnow pnow2">
+  <button type="button" class="pay-btn2 " (click)="close(false)">CANCEL</button> 
+  </div>
+
+</div>

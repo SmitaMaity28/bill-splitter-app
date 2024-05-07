@@ -1,0 +1,57 @@
+<div class="overlay"></div>
+
+<div class="container models">
+  <div class="d-flex justify-content-between label">
+    <h1 class="ms-3">Add an Expense</h1>
+    <h1 class="text-end cursor clsbtn me-4" (click)="close()">X</h1>
+  </div>
+
+  <div class="container">
+    <form class=" p-2">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="friends" placeholder="With Whome" [(ngModel)]="friends"
+          (click)="dropdowns()" (disabled)="true">
+        <label for="floatingInput">Select Friends</label>
+      </div>
+      <div class="dropdown" *ngIf="dropdown" >
+        <div class="container friend" >
+          <p class="close" (click)="dropdowns()" >x</p>
+          <div class="form-check mx-5" *ngFor="let friend of friendsarr; index as i" >
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" data-md-icheck (change)="toggleVisibility($event,i)" >
+            <label class="form-check-label" for="flexCheckDefault">
+              {{friend.friends}}
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="description" placeholder="Description" [(ngModel)]="description">
+        <label for="floatingInput">Description</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="catagory" placeholder="catagory" [(ngModel)]="catagory">
+        <label for="floatingInput">Category</label>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" name="amount" placeholder="catagory" [(ngModel)]="amount">
+          <label for="floatingInput">Amount</label>
+        </div>
+        <div class="form-floating  mb-3">
+          <input type="text" class="form-control" placeholder="catagory">
+          <label for="floatingInput">Add image</label>
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="date" class="form-control" name="date" placeholder="catagory" [(ngModel)]="date">
+        <label for="floatingInput">Date</label>
+      </div>
+      <div class="d-flex justify-content-evenly mb-3">
+        <button type="button" class="btn btn-success btn-lg btn3d p-2 w-25" (click)="save()"> Save</button>
+        <button type="button" class="btn btn-danger btn-lg btn3d p-2 w-25" (click)="close()">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

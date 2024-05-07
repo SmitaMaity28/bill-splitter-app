@@ -1,0 +1,15 @@
+<div class="overlay"></div>
+
+<div class="container models">
+  <div class="d-flex justify-content-between label">
+    <h1 class="ms-3 title">Expence Details</h1>
+    <h1 class="text-end cursor clsbtn me-4" (click)="close()">X</h1>
+  </div>
+  <div class="container box">
+    <h1 class="name">{{expencedetaildata.friends}}</h1>
+    <h1 class="amount">Amount: Rs.{{expencedetaildata.amount}}</h1>
+    <p class="catagory">Category: {{expencedetaildata.catagory}}</p>
+    <p class="description">Description: {{expencedetaildata.description}}</p>
+    <img class="img" src="https://thumbs.dreamstime.com/b/money-logo-vector-business-template-125982168.jpg" alt="">
+  </div>
+</div>

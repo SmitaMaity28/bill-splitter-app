@@ -1,0 +1,76 @@
+<div class="container d-flex upmost">
+<h1 class="heading">{{user}}'s Dashboard</h1>
+<button class="btn mx-2 logout" type="button" (click)="logout()">Logout</button>
+</div>
+<div class="container contain">
+  <div class="container friendList">
+    <h1 class="title">Friends</h1>
+    <div class="text-center">
+ <button class="btn mx-2 " type="button" (click)="openf()">+ Add Friends</button>
+ <div class="container ">
+  <div class="container mt-2 d-flex justify-content-between" *ngFor="let friend of friendsarr; index as i">
+    <div class="chip">
+      <p>{{friend.friends}}</p>
+      <div class="chip__close">
+        <p (click)="deleteFriend(i)" >X</p>
+      </div>
+    </div>
+  </div>
+ </div>
+    </div>
+  </div>
+  <div class="container box " >
+    <div class="container box1">
+        <h1 class="title">You owe</h1>
+        <div class="details">
+        <div class="container expencebox" *ngFor="let items of expence; index as i">
+             <p class="date">{{items.date}}</p>
+          <div class="container friendbox" *ngFor="let item of expence[i].friends; index as j">
+            <div class="separate">
+              <p class="friend">{{item.friends}}</p>
+              <p class="amount">Rs.{{items.amount}}</p>
+            </div>
+
+            <div class="paynow">
+              <button class="paybtn" (click)="deletes(i,j)">Paid</button>
+              <button class="paybtn" (click)="details(i,j)">Details</button>
+            </div>
+          </div>
+          <p class="tamount">Total Amount: {{items.total}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="container box2">
+        <h1 class="title">You are owe</h1>
+        <div class="details">
+          <div class="container expencebox" *ngFor="let nitems of expence2; index as l">
+               <p class="date">{{nitems.date}}</p>
+            <div class="container friendbox" *ngFor="let nitem of expence2[l].friends; index as m">
+              <div class="separate">
+                <p class="friend">{{nitem.friends}}</p>
+                <p class="amount">Rs.{{nitems.amount}}</p>
+              </div>
+              <div class="paynow">
+
+              <button class="paybtn" (click)="pay(l,m)">pay</button>
+              <button class="paybtn" (click)="details(l,m)">details</button>
+              </div>
+            </div>
+            <p class="tamount">Total Amount: {{nitems.total}}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container box3">
+    <app-paynow [amount]="amount" (closePaynow)="paids($event)" *ngIf="paynow" ></app-paynow>
+    <app-expencedetail *ngIf="showdetail " [expencedetaildata]="expencedetailsdata" (closeExpenceDetail)="opendetail()"></app-expencedetail>
+    <app-addmoney  [friendsarr]="friendsarr" *ngIf="show" (closes)="open()" (saves)="save($event)"></app-addmoney>
+    <app-addfriends *ngIf="showf" (closef)="openf()" (friend)="addfriends($event)"></app-addfriends>
+    <h1 class="title">Buttons</h1>
+    <div class="d-flex mx-2">
+      <button class="btn mx-2" type="button" (click)="open()">Add an expense + </button>
+    </div>
+  </div>
+</div>
+
+
